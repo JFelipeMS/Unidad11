@@ -6,8 +6,14 @@
 const express = require('express')
 const server = express()
 
+server.set("view engine", "ejs")
+
 const PORT = process.env.PORT || 8081
 const conexion = require('./database/db')
+const crud = require('./controller/crud')
+
+//rutas
+server.get('/', crud.consultar)
 
 
 server.listen(PORT, () => {
