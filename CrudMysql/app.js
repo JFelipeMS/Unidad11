@@ -14,7 +14,9 @@ const crud = require('./controller/crud')
 
 //rutas
 server.get('/', crud.consultar)
-
+server.get('/crear', (req,res) =>{
+    res.render('create')
+})
 
 server.listen(PORT, () => {
     console.log("servidor funcionando en http://localhost:"+PORT)
