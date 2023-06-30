@@ -27,6 +27,14 @@ server.post('/salvar',crud.save)
 server.get('/editar/:id', crud.consultaruno)
 server.post('/actualizar',crud.actualizar)
 server.get('/borrar/:id',crud.delete)
+
+//Rutas Api
+server.get('/api/personas', crud.api_consultatodos)
+server.get('/api/persona/:id', crud.api_consultauno)
+server.post('/api/agregar/',crud.api_agregar)
+server.put('/api/actualizar/', crud.api_actualizar)
+server.get('/api/actualizar/', crud.api_actualizar) //no es correcto, solo por probar
+server.delete('/api/borrar/:id', crud.api_borrar)
 //fin Rutas
 
 server.listen(PORT, () => {
