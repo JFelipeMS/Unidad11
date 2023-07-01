@@ -1,0 +1,10 @@
+use backend_db
+db.personas.insertMany([
+    {nombre:"Maria",edad:24,genero:1,email:"maria@correo.com"},
+    {nombre:"Jose",edad:26,genero:0,email:"jose@correo.com"}])
+db.getUsers()
+db.createUser({
+    user:'admin',
+    pwd:'admin',
+    roles: [{role:'readWrite',db:'backend_db'}]
+})
