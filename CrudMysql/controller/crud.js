@@ -96,6 +96,17 @@ exports.api_consultauno = (req,res) => {
         res.send(consulta)
     })
 }
+exports.api_consultaunoid = (req,res) => {
+    const id = req.query.id
+    console.log(id)
+    conexion.query('select * from persona where id='+id,(error, consulta) => {
+        if(error){
+            console.log("error consultando el id en la tabla persona: "+ error)
+            return
+        }
+        res.send(consulta)
+    })
+}
 exports.api_agregar = (req,res) => {
     const nombre = req.query.nombre
     const edad = req.query.edad

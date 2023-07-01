@@ -31,6 +31,7 @@ server.get('/borrar/:id',crud.delete)
 //Rutas Api
 server.get('/api/personas', crud.api_consultatodos)
 server.get('/api/persona/:id', crud.api_consultauno)
+server.get('/api/personaid', crud.api_consultaunoid)
 server.post('/api/agregar/',crud.api_agregar)
 server.put('/api/actualizar/', crud.api_actualizar)
 server.get('/api/actualizar/', crud.api_actualizar) //no es correcto, solo por probar
