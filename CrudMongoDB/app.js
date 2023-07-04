@@ -23,6 +23,13 @@ server.post('/salvar',crud.save)
 server.get('/editar/:id', crud.consultaruno)
 server.post('/actualizar',crud.actualizar)
 server.get('/borrar/:id',crud.delete)
+
+//Rutas Api
+server.get('/api/personas', crud.api_consultatodos)
+server.get('/api/personaid', crud.api_consultaunoid)
+server.post('/api/agregar/',crud.api_agregar)
+server.put('/api/actualizar/', crud.api_actualizar)
+server.delete('/api/borrar/', crud.api_borrar)
 //Fin Rutas
 
 server.listen(PORT, () => {
